@@ -1,0 +1,121 @@
+/*======= Reset CSS ====================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+/*======= variable ====================*/
+:root {
+  --base-color: rgb(231, 231, 231);
+}
+
+/*======= Header ====================*/
+header {
+  background-color: rgb(3, 134, 3);
+  text-align: center;
+  padding: 2rem 0 10rem;
+}
+
+/*======= Global ====================*/
+#logo {
+  color: white;
+  font-weight: 100;
+  font-family: 'Dancing Script', sans-serif;
+}
+
+.container {
+  width: min(90vw, 500px);
+
+  margin: auto;
+}
+
+body {
+  font-family: 'DM Sans' sans-serif;
+  background-color: #cacbcc;
+}
+
+/*======= balance ====================*/
+#balance {
+  margin-top: -5rem;
+  margin-bottom: 3rem;
+  font-weight: normal;
+}
+
+#balance h2 {
+  color: white;
+  padding: 1rem 0;
+  font-weight: normal;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card.total {
+  background-color: rgb(55, 160, 55);
+}
+
+.card.total h3,
+.card.total p {
+  color: white;
+}
+
+#balance h3 {
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.6rem;
+}
+
+/*======= trasaction ====================*/
+#trasaction h2 {
+  padding: 1rem;
+  font-weight: normal;
+}
+#table-one {
+  width: 100%;
+  text-align: left;
+  border-spacing: 0 0.4rem;
+  font-size: 0.6rem;
+}
+
+table td {
+  background-color: var(--base-color);
+  padding: 0.5rem 0.5rem;
+  border-radius: 2px;
+}
+tbody tr {
+  transition: 0.5s;
+}
+tbody tr:hover {
+  transform: scale(1.1);
+}
+table th {
+  background-color: var(--base-color);
+  font-weight: normal;
+  padding: 0.5rem 0.5rem;
+  border-radius: 2px;
+}
+
+/*======= footer ====================*/
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: rgb(20, 17, 17);
+  font-weight: 100;
+  font-family: 'Dancing Script', sans-serif;
+}
