@@ -2,6 +2,7 @@ const overlay = document.querySelector('.modal-overlay')
 const buttonNew = document.querySelector('.button-new')
 const buttonCancel = document.querySelector('.button.cancel')
 const buttonSave = document.querySelector('.save-bt')
+//const buttonRemove = document.querySelector('remove-button')
 
 buttonNew.addEventListener('click', function () {
   overlay.classList.add('active')
@@ -25,7 +26,7 @@ const transactions = [
   {
     id: 2,
     description: 'web site',
-    amount: 5000000,
+    amount: 500000,
     date: '24/01/2021'
   },
   {
@@ -45,7 +46,7 @@ const Transaction = {
     app.reload()
   },
 
-  remove() {
+  remove(index) {
     Transaction.all.splice(index, 1)
 
     app.reload()
