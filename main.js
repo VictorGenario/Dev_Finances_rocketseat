@@ -16,29 +16,18 @@ buttonSave.addEventListener('click', function () {
   overlay.classList.remove('active')
 })
 
-const transactions = [
-  {
-    id: 1,
-    description: 'luz',
-    amount: -50000,
-    date: '23/01/2021'
+const Storage = {
+  get() {
+    return JSON.parse(localStorage.getItem('Transactions')) || []
   },
-  {
-    id: 2,
-    description: 'web site',
-    amount: 500000,
-    date: '24/01/2021'
-  },
-  {
-    id: 3,
-    description: 'aluguel',
-    amount: -150000,
-    date: '26/01/2021'
+
+  set(transactions) {
+    localStorage.setItem('Transactions', JSON.stringify(transactions))
   }
-]
+}
 
 const Transaction = {
-  all: transactions,
+  all: Storage.get(),
 
   add(transaction) {
     Transaction.all.push(transaction)
@@ -134,7 +123,7 @@ const Utils = {
   formatAmount(value) {
     value = Number(value) * 100
 
-    return value
+    return Math.round(value)
   },
 
   formatDate(date) {
@@ -223,6 +212,8 @@ const app = {
     Transaction.all.forEach(DOM.addTransaction)
 
     DOM.updateBalance()
+
+    Storage.set(Transaction.all)
   },
   reload() {
     DOM.clearTranscations()
